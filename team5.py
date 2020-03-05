@@ -6,7 +6,6 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'The Law Firm of Pratt and Roberts' # Only 10 chars displayed.
 strategy_name = 'Jaded'
 strategy_description = "We collude until we're screwed."
     
