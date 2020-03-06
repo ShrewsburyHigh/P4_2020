@@ -107,7 +107,7 @@ def play_iterative_rounds(player1, player2):
     Returns 4-tuple, for example ('cc', 'bb', -200, 600) 
     but with much longer strings 
     '''
-    number_of_rounds = random.randint(100, 200)
+    number_of_rounds = 100
     moves1 = ''
     moves2 = ''
     score1 = 0
