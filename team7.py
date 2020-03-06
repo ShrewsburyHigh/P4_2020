@@ -1,18 +1,18 @@
 ####
 # Each team's file must define four tokens:
-#     team_name: a string
+#     team_name: KyleNikhita
 #     strategy_name: a string
 #     strategy_description: a string
 #     move: A function that returns 'c' or 'b'
 ####
 
-team_name = 'team_Barney' # Only 10 chars displayed.
+team_name = 'team_Kyle' # Only 10 chars displayed.
 strategy_name = 'Three is Company'
 strategy_description = 'We will betray every third time regardless of what the other has done'
-    
+
 def move(my_history, their_history, my_score, their_score):
     # This player colludes on every third round (first round is round #0).
-    if len(my_history)%5 == 0:
+    if len(my_history)%3 == 0:
         return 'b'
     else:
         return 'c'
