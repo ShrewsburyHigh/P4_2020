@@ -9,16 +9,15 @@ def move(my_history, their_history, my_score, their_score):
     Make my move.
     Returns 'c' or 'b'. 
     '''
-  
-    if len(my_history) == [1,50]: # It's the first round; collude.
-        return 'c'
+    
+   
+    if 'c' in their_history[-3:]: 
+            return 'b' # Betray if opponent colluded in previous three rounds
     else:
-        if 'c' in their_history[-3:]: 
-            return 'b' # Betray if severely punished last time,
-        else:
             return 'c' # otherwise collude.
 
-    
+      
+            
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
     from this module. Prints error if return value != result.
@@ -38,8 +37,8 @@ def test_move(my_history, their_history, my_score, their_score, result):
 if __name__ == '__main__':
      
     # Test 1: Betray on first move.
-    if test_move(my_history='',
-              their_history='', 
+    if test_move(my_history='cccb',
+              their_history='cccc', 
               my_score=0,
               their_score=0,
               result='b'):
